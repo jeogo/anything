@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 39 70% 95%; /* Soft beige background */
+    --foreground: 0 0% 15%; /* Deep black for text */
+    --card: 0 0% 100%; /* Pure white card background */
+    --card-foreground: 0 0% 15%; /* Deep black for card text */
+    --popover: 39 70% 95%; /* Soft beige popover */
+    --popover-foreground: 0 0% 15%; /* Deep black for popover text */
+    --primary: 20 75% 50%; /* Rich golden hue */
+    --primary-foreground: 0 0% 100%; /* Pure white for text on primary */
+    --secondary: 39 40% 90%; /* Light sand color */
+    --secondary-foreground: 0 0% 15%; /* Deep black for secondary text */
+    --muted: 39 30% 85%; /* Muted beige */
+    --muted-foreground: 0 0% 25%; /* Dark grey for muted text */
+    --accent: 12 76% 61%; /* Warm terracotta accent */
+    --accent-foreground: 0 0% 100%; /* Pure white for accent text */
+    --destructive: 0 84.2% 60.2%; /* Vivid red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* Pure white for destructive text */
+    --border: 39 30% 80%; /* Soft border color */
+    --input: 39 30% 90%; /* Light input background */
+    --ring: 20 75% 50%; /* Rich golden ring color */
+    --radius: 1rem; /* Rounded corners for all elements */
+    --chart-1: 12 76% 61%; /* Warm terracotta for chart */
+    --chart-2: 173 58% 39%; /* Cool blue-green for chart */
+    --chart-3: 197 37% 24%; /* Deep teal for chart */
+    --chart-4: 43 74% 66%; /* Bright orange for chart */
+    --chart-5: 27 87% 67%; /* Warm yellow for chart */
+  }
+
+  .dark {
+    --background: 0 0% 15%; /* Deep dark background */
+    --foreground: 39 70% 95%; /* Light beige text */
+    --card: 0 0% 20%; /* Dark card background */
+    --card-foreground: 39 70% 95%; /* Light beige for card text */
+    --popover: 0 0% 20%; /* Dark popover background */
+    --popover-foreground: 39 70% 95%; /* Light beige for popover text */
+    --primary: 20 75% 50%; /* Rich golden for primary elements */
+    --primary-foreground: 0 0% 100%; /* Pure white for text on primary */
+    --secondary: 215 27.9% 16.9%; /* Dark slate color */
+    --secondary-foreground: 39 70% 95%; /* Light beige for secondary text */
+    --muted: 0 0% 25%; /* Muted dark grey */
+    --muted-foreground: 39 70% 95%; /* Light beige for muted text */
+    --accent: 27 87% 67%; /* Warm yellow accent */
+    --accent-foreground: 0 0% 15%; /* Deep black for accent text */
+    --destructive: 0 62.8% 30.6%; /* Dark red for destructive actions */
+    --destructive-foreground: 39 70% 95%; /* Light beige for destructive text */
+    --border: 0 0% 25%; /* Dark border color */
+    --input: 0 0% 20%; /* Dark input background */
+    --ring: 27 87% 67%; /* Warm yellow ring color */
+    --chart-1: 220 70% 50%; /* Cool blue for charts */
+    --chart-2: 160 60% 45%; /* Warm green for charts */
+    --chart-3: 30 80% 55%; /* Bright orange for charts */
+    --chart-4: 280 65% 60%; /* Vivid purple for charts */
+    --chart-5: 340 75% 55%; /* Bold pink for charts */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Arabic specific font and text styling */
+  body,
+  * {
+    font-family: "Amiri", serif; /* Elegant Arabic-style font */
+    line-height: 1.6; /* Improved readability */
+    font-weight: bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Amiri", serif;
+    font-weight: 700;
+  }
+
+  p,
+  a,
+  span,
+  div {
+    font-family: "Amiri", serif;
+    font-weight: 700; /* Ensuring bold text for all elements */
+  }
+}
